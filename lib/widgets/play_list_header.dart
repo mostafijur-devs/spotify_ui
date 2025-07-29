@@ -16,15 +16,16 @@ class PlayListHeader extends StatelessWidget {
         Row(
           children: [
             Image.asset(
-              alignment: Alignment.center,
+
+              // alignment: Alignment.center,
               playlist.imageURL,
               height: 200.0,
-              width: ismobileSize?MediaQuery.of(context).size.width*0.85.h:200.0,
+              width: ismobileSize?MediaQuery.of(context).size.width*0.88:200.0,
               fit: BoxFit.cover,
             ),
+            if(MediaQuery.of(context).size.width>500)
             const SizedBox(width: 16.0),
             if(MediaQuery.of(context).size.width>500)
-
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

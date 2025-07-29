@@ -16,7 +16,8 @@ class CurrentTracks extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Row(
           children: [
-            _TrackTnfo(),
+
+              _TrackTnfo(),
             Spacer(),
             _PlayerController(),
             Spacer(),
@@ -112,6 +113,8 @@ class _TrackTnfo extends StatelessWidget {
           fit: BoxFit.cover,
         ),
          SizedBox(width: 12.0.w),
+        if(MediaQuery.of(context).size.width>500)
+
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,7 +130,11 @@ class _TrackTnfo extends StatelessWidget {
             ),
           ],
         ),
+        if(MediaQuery.of(context).size.width>500)
+
         SizedBox(width: 10.0),
+        if(MediaQuery.of(context).size.width>500)
+
         IconButton(onPressed: () {}, icon: Icon(Icons.favorite_border)),
       ],
     );
@@ -140,6 +147,7 @@ class _MoreControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      // mainAxisSize: MainAxisSize.min,
       children: [
         IconButton(
           onPressed: () {},
