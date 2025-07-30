@@ -73,6 +73,18 @@ flutter:
           weight: 600
         - asset: fonts/Montserrat-Bold.ttf
           weight: 700
+    - family: PlayfairDisplay
+      fonts:
+        - asset: fonts/PlayfairDisplay-Regular.ttf
+
+    - family: Handsome
+      fonts:
+        - asset: fonts/Handsome.otf
+
+    - family: FormaleScript
+      fonts:
+        - asset: fonts/FormaleScript_PERSONAL_USE_ONLY.otf
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

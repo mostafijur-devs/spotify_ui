@@ -1,13 +1,5 @@
-import 'dart:io';
-import 'package:app/data/data.dart';
 import 'package:app/models/current_track_model.dart';
-import 'package:app/screen/home/home_layout.dart';
-import 'package:app/screen/play_list_screen.dart';
-import 'package:app/widgets/current_tracks.dart';
 import 'package:app/widgets/material_apps.dart';
-import 'package:app/widgets/side_menu.dart';
-import 'package:desktop_window/desktop_window.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,9 +10,9 @@ void main() async {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp
   ]);
-  if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
-    await DesktopWindow.setWindowSize(const Size(600, 800));
-  }
+  // if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
+  //   await DesktopWindow.setWindowSize(const Size(600, 800));
+  // }
   runApp(ChangeNotifierProvider(create:(context) => CurrentTrackModel(),child: MyApp()));
 }
 
@@ -75,5 +67,4 @@ class MyApp extends StatelessWidget {
 //     ),
 //   ),
 // ),
-
 

@@ -8,7 +8,7 @@ class MaterialApps extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool ismobileSize = MediaQuery.of(context).size.width<500;
+    bool ismobileSize = MediaQuery.of(context).size.width<700;
     return MaterialApp(
       title: 'Flutter Spotify UI',
       debugShowCheckedModeBanner: false,
@@ -30,7 +30,7 @@ class MaterialApps extends StatelessWidget {
         textTheme: TextTheme(
           headlineLarge:  TextStyle(
             color: Colors.white,
-            fontSize : ismobileSize? 20: 32.0,
+            fontSize : ismobileSize? 22: 32,
             fontWeight: FontWeight.bold,
           ),
           headlineSmall: TextStyle(

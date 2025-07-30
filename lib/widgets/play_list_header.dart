@@ -39,7 +39,10 @@ class PlayListHeader extends StatelessWidget {
                   const SizedBox(height: 12.0),
                   Text(
                     playlist.name,
-                    style: Theme.of(context).textTheme.headlineLarge,
+                    style: TextStyle(
+                      fontFamily: 'FormaleScript',
+                      fontSize: 30
+                    ),
                   ),
                   const SizedBox(height: 12.0),
                   Text(
@@ -70,7 +73,10 @@ class PlayListHeader extends StatelessWidget {
               const SizedBox(height: 12.0),
               Text(
                 playlist.name,
-                style: Theme.of(context).textTheme.headlineLarge,
+                style:TextStyle(
+                    fontFamily: 'FormaleScript',
+                    fontSize: 30
+                ),
               ),
               const SizedBox(height: 12.0),
               Text(
