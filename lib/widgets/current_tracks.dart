@@ -40,59 +40,64 @@ class _PlayerController extends StatelessWidget {
     final selected = context.watch<CurrentTrackModel>().selected;
     return Column(
       children: [
-        Row(
-          children: [
-            IconButton(
-              padding: EdgeInsets.only(),
-              onPressed: () {},
-              icon: Icon(Icons.shuffle),
-              iconSize: 20.0,
-            ),
-            IconButton(
-              padding: EdgeInsets.only(),
-              onPressed: () {},
-              icon: Icon(Icons.skip_previous_outlined),
-              iconSize: 20.0,
-            ),
-            IconButton(
-              padding: EdgeInsets.only(),
-              onPressed: () {},
-              icon: Icon(Icons.play_circle_outline),
-              iconSize: 34.0,
-            ),
-            IconButton(
-              padding: EdgeInsets.only(),
-              onPressed: () {},
-              icon: Icon(Icons.skip_next_outlined),
-              iconSize: 20.0,
-            ),
-            IconButton(
-              padding: EdgeInsets.only(),
-              onPressed: () {},
-              icon: Icon(Icons.repeat),
-              iconSize: 20.0,
-            ),
-          ],
+        Expanded(
+          flex: 2,
+          child: Row(
+            children: [
+              IconButton(
+                padding: EdgeInsets.only(),
+                onPressed: () {},
+                icon: Icon(Icons.shuffle),
+                iconSize: 20.0,
+              ),
+              IconButton(
+                padding: EdgeInsets.only(),
+                onPressed: () {},
+                icon: Icon(Icons.skip_previous_outlined),
+                iconSize: 20.0,
+              ),
+              IconButton(
+                padding: EdgeInsets.only(),
+                onPressed: () {},
+                icon: Icon(Icons.play_circle_outline),
+                iconSize: 34.0,
+              ),
+              IconButton(
+                padding: EdgeInsets.only(),
+                onPressed: () {},
+                icon: Icon(Icons.skip_next_outlined),
+                iconSize: 20.0,
+              ),
+              IconButton(
+                padding: EdgeInsets.only(),
+                onPressed: () {},
+                icon: Icon(Icons.repeat),
+                iconSize: 20.0,
+              ),
+            ],
+          ),
         ),
         // SizedBox(height: 4.0,),
-        Row(
-          children: [
-            Text('0:00', style: Theme.of(context).textTheme.titleSmall),
-            SizedBox(width: 8.0),
-            Container(
-              height: 5.0,
-              width: MediaQuery.of(context).size.width * 0.3,
-              decoration: BoxDecoration(
-                color: Colors.grey[800],
-                borderRadius: BorderRadius.circular(2.5),
+        Expanded(
+          child: Row(
+            children: [
+              Text('0:00', style: Theme.of(context).textTheme.titleSmall),
+              SizedBox(width: 8.0),
+              Container(
+                height: 5.0,
+                width: MediaQuery.of(context).size.width * 0.3,
+                decoration: BoxDecoration(
+                  color: Colors.grey[800],
+                  borderRadius: BorderRadius.circular(2.5),
+                ),
               ),
-            ),
-            SizedBox(width: 8.0),
-            Text(
-              selected?.duration ?? '0:00',
-              style: Theme.of(context).textTheme.titleSmall,
-            ),
-          ],
+              SizedBox(width: 8.0),
+              Text(
+                selected?.duration ?? '0:00',
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
+            ],
+          ),
         ),
       ],
     );

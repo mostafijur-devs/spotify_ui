@@ -1,4 +1,6 @@
+import 'package:app/models/current_track_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../data/data.dart';
 import '../../widgets/current_tracks.dart';
@@ -19,7 +21,7 @@ class HomeLayout extends StatelessWidget {
                 if (MediaQuery.of(context).size.width > 800)
                   SideMenu(),
                    Expanded(
-                    child: PlayListScreen(playlist: lofihiphopPlaylist)),
+                    child: PlayListScreen(playlist: homePlaylist[context.read<CurrentTrackModel>().playItemNumber],context: context,)),
               ],
             ),
           ),

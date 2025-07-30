@@ -9,7 +9,7 @@ class PlayListHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool ismobileSize = MediaQuery.of(context).size.width<500;
+    bool ismobileSize = MediaQuery.of(context).size.width<=500;
 
     return Column(
       children: [
@@ -57,7 +57,7 @@ class PlayListHeader extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 20.0),
-        if(MediaQuery.of(context).size.width<500)
+        if(MediaQuery.of(context).size.width<=500)
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

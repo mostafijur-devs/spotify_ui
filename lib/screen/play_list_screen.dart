@@ -1,14 +1,18 @@
 import 'package:app/data/data.dart';
+import 'package:app/models/current_track_model.dart';
 import 'package:app/widgets/play_list_header.dart';
 import 'package:app/widgets/side_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/tracks_list.dart';
 
 class PlayListScreen extends StatefulWidget {
-  const PlayListScreen({super.key, required this.playlist});
+  const PlayListScreen({super.key, required this.playlist, required this.context});
 
   final Playlist playlist;
+  final BuildContext context;
+
 
   @override
   State<PlayListScreen> createState() => _PlayListScreenState();
@@ -49,7 +53,11 @@ class _PlayListScreenState extends State<PlayListScreen> {
             children: [
               InkWell(
                 customBorder: const CircleBorder(),
-                onTap: () {},
+                onTap: () {
+                  context.read<CurrentTrackModel>().playItemdiscures;
+                  print('playItem${context.read<CurrentTrackModel>().playItemNumber}');
+
+                },
                 child: Container(
                   padding: EdgeInsetsGeometry.all(6.0),
                   decoration: BoxDecoration(
@@ -62,7 +70,10 @@ class _PlayListScreenState extends State<PlayListScreen> {
               const SizedBox(width: 16.0),
               InkWell(
                 customBorder: const CircleBorder(),
-                onTap: () {},
+                onTap: () {
+                  context.read<CurrentTrackModel>().playItemIncuressing;
+                  print('playItem${context.read<CurrentTrackModel>().playItemNumber}');
+                },
                 child: Container(
                   padding: EdgeInsetsGeometry.all(6.0),
                   decoration: BoxDecoration(

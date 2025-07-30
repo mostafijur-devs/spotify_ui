@@ -10,6 +10,7 @@ class TracksList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('jhejke');
     return DataTable(
       showCheckboxColumn: false,
       dataRowHeight: 54.0,
